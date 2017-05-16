@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head class="no-skrollr">
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{{title}}</title>
+      {% style "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"   %}
+      {% style "css/main.css"  %}
+  </head>
+
+  <body>
+
+      <nav class="navbar navbar-mds navbar-fixed-top">
+          <div class="container-fluid">
+              <div class="navbar-header" >
+                  <button
+                      type="button"
+                      class="navbar-toggle collapsed"
+                      data-toggle="collapse"
+                      data-target="navbar-main-section"
+                      aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand"  href="#" >
+                      {{brand}}
+                  </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-main-section">
+                  <ul class="nav navbar-nav">
+                      <li class="active">
+                          <a href="#">About Us <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li>
+                          <a href="#">Our Stories</a>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                              For Students and Parents <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Something else here</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Separated link</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                              Get Involved <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Another action</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Separated link</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+
+      <!-- <div>
+           <div class="parallax-window"
+           style="height: 750px"></div>
+           <section>
+           <h1>
+           Second Test <br />
+           Third Test <br /> 
+           Test diddlydum <br />
+           </h1>
+           </section>
+           </div> -->
+
+
+      <div id="skrollr-body" >
+          <img class="backdrop-img-1"
+               src="https://placehold.it/1980x1400/008833?text=MDS%20Group%20Photo"
+               data-374="position: fixed; top: 0px;"
+               data-375="position: absolute; top: 375px;"
+               data-575="top: -400px">
+          <div class="shaded-text-overlay-fixed backdrop-img-1"
+               data-0="z-index: 0;  opacity: 0;"
+               data-375="opacity: 1;"
+               data-575="opacity: 0;">
+              <h1>{{backdrop-1-txt}}</h1>
+          </div>
+          <img class="backdrop-img-1"
+               src="https://placehold.it/1980x1400/883300?text=MDS%20Group%20Photo"
+               style="top: 100vh;"
+               data-0="opacity: 0;"
+               data-374="opacity:0;" 
+               data-375="top: 100vh; opacity: 1;" 
+               data-575="top: 0px;">
+
+          <div class="container"
+               data-0="top: 25vh; opacity: 0;"
+               data-575="opacity: 0;"
+               data-800="opacity: 1"
+               style="position: fixed">
+              <div class="row" >
+                  <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6 shaded-text-overlay">
+                      {{blurb-header|safe}}
+                      {{blurb-body|safe}}
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+      <!-- scripts and styles -->
+      {% script  "https://code.jquery.com/jquery-3.2.1.min.js"  %}
+      
+      {% script "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %}
+      <!-- {% script "js/parallax.min.js" %} -->
+      {% script "js/skrollr.min.js"  %}
+      <script type="text/javascript">
+       var context = "{{servlet-context}}";
+       var csrfToken = "{{csrf-token}}";
+       /* $('.parallax-window').parallax({imageSrc: 'https://placehold.it/1400x1400/003300',
+        *                              naturalWidth: 1400, naturalHeight: 1400, positionY: "top"});*/
+       var s = skrollr.init({
+           constants: {
+               box: "150p",
+           },
+       });
+       
+      </script>
+  </body>
+
+</html>
+
+
+
+

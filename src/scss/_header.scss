@@ -1,0 +1,11 @@
+.nav a, a.navbar-brand {
+    color: $nav-link-text;
+    &:hover, &:focus {
+        color: $nav-link-text;
+        background-color: transparentize(black, 0.85) !important;
+    }
+    &:active {
+        color: $nav-link-text;
+        background-color: transparent;
+    }
+}

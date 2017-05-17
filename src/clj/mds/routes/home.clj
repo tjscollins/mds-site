@@ -2,14 +2,15 @@
   (:require [mds.layout :as layout]
             [compojure.core :refer [defroutes GET]]
             [ring.util.http-response :as response]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [markdown.core :refer [md-to-html-string]]))
 
 (defn home-page []
   (layout/render "home.html" {:title "CNMI Scholars"
                               :brand "CNMI Scholars"
-                              :backdrop-1-txt "We are the Million Dollar Scholars"
-                              :blurb-header "<h1>We Make Scholars, Everyday</h1>"
-                              :blurb-body  "<p>Here in the CNMI, we are making scholars.</p>"}))
+                              :backdrop-1-txt "The Million Dollar Scholars"
+                              :mds-info (slurp "resources/docs/mds-info-blurb.md")
+                              :student-info (slurp "resources/docs/student-blurb.md")}))
 
 (defroutes home-routes
   (GET "/" []

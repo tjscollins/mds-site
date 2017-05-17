@@ -2,10 +2,35 @@
     color: $nav-link-text;
     &:hover, &:focus {
         color: $nav-link-text;
-        background-color: transparentize(black, 0.85) !important;
+        background-color: $header-hover-bg !important;
     }
     &:active {
         color: $nav-link-text;
         background-color: transparent;
     }
+}
+
+.navbar-nav>li>.dropdown-menu {
+    background: $header-hover-bg;
+    border: none;
+
+    a {
+        color: $nav-link-text;
+        &:hover, &:focus {
+                     color: $nav-link-text;
+                     background-color: $header-hover-bg !important;
+                 }
+        &:active {
+            color: $nav-link-text;
+            background-color: transparent;
+        }
+    }
+}
+
+#navbar-main-section ul.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    width: calc(100%-170px);
 }

@@ -8,7 +8,7 @@
   height: 100vh; 
 }
 
-.backdrop-img-1 {
+.backdrop-img {
     position: fixed;
     top: 0px;
     left: 0px; 
@@ -16,26 +16,21 @@
     height: 100%;
     z-index: -100;
 } 
-
+ 
 .shaded-text-overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: transparentize(black, 0.25);
+  background-color: $text-overlay-bg;
   color: white;
   z-index: 100;
+  font-size: 18px;
 }
 
 .shaded-text-overlay-fixed {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: transparentize(black, 0.25);
-  color: white;
-  z-index: 100;
+    @extend .shaded-text-overlay;
+    position: fixed;
 }
 
 #skrollr-body {

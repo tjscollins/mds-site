@@ -65,7 +65,7 @@
                        :executable "sassc"
                        :args       ["-m" "-I" "src/scss/" "-t" "nested"]}
           :production {:source-dir "scss/"
-                       :dest-dir   "public/css/"
+                       :dest-dir   "resources/public/css/"
                        :executable "sassc"
                        :args       ["-I" "scss/" "-t" "compressed"]
                        :jar        true}

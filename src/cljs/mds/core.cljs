@@ -16,29 +16,34 @@
   (:import goog.History))
 
 (def jq js/jQuery)
+(defn ceil [n] (.ceil js/Math n))
+(defn abs [n]  (.abs js/Math n))
 
 (defn within?
   "Returns true if first two values are separated by less than the third value"
-  [& value]
-  (<= (.abs js/Math (- (first value) (second value))) (.abs js/Math (last value))))
+  [a b c]
+  (< (abs (- a b)) (abs c)))
 
 (defn slow-scroll
-  "Slow scroll for scrolling links"
+  "Slower scroll for scrolling-navigation links.  Optional third argument sets
+  the number of smaller scrolls the total scroll will be broken into.  Defaults 
+  to calling window.scrollTo in 3px increments"
   ([current target] (slow-scroll current
                                  target
-                                 (quot (.abs js/Math (- current target)) 3)))
+                                 (quot (abs (- current target)) 3)))
   ([current target steps]
-   (let [dist (- target current)]
-     (let [interval (if (> dist 0)
-                        (.ceil js/Math (/ dist steps))
-                        (* -1 (.ceil js/Math (/ (* -1 dist) steps))))
-           scroll (atom nil)]
-       (reset! scroll (js/setInterval
-                       (fn [] (let [pos js/scrollY]
-                                (if (within? pos target interval)
-                                  (js/clearInterval @scroll)
-                                  (js/scrollTo 0 (.ceil js/Math  (+ pos interval))))))
-                       0))))))
+   (let [dist (- target current)
+         interval (if (> dist 0) 
+                    (ceil (/ dist steps))
+                    (* -1 (ceil (/ (* -1 dist) steps))))
+         scroll (atom nil)]
+     (reset! scroll (js/setInterval
+                     (fn [] (let [pos js/scrollY
+                                  next-pos  (ceil (+ pos interval))]
+                              (if (within? pos target interval)
+                                (js/clearInterval @scroll)
+                                (js/scrollTo 0 next-pos))))
+                     0)))))
 
 (defn setup-navbar-links
   "Add jQuery event handlers for #about-us and #our-stories links"
@@ -127,5 +132,5 @@
 ;;   (load-interceptors!)
 ;;   (hook-browser-navigation!)
 ;;   (mount-components)
-  ;; (fetch-docs!)
+;;   (fetch-docs!)
   (setup-navbar-links))

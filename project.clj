@@ -20,6 +20,7 @@
                  [mount "0.1.11"]
                  [org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.521" :scope "provided"]
+                 [org.clojure/java.jdbc "0.7.0-alpha3"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.3.1"]
                  [org.postgresql/postgresql "42.0.0"]

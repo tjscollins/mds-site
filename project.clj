@@ -1,7 +1,7 @@
 (defproject mds "0.1.0-SNAPSHOT"
 
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "A website for the CNMI's Million Dollar Scholars program"
+  :url "https://cnmischolars.com"
 
   :dependencies [[cljs-ajax "0.5.9"]
                  [cljsjs/jquery "2.2.4-0"]
@@ -145,6 +145,6 @@
                       :optimizations :whitespace
                       :pretty-print true}}}}
                   
-                  }
+                  } 
    :profiles/dev {}
    :profiles/test {}})

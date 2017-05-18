@@ -10,7 +10,8 @@
                               :brand "CNMI Scholars"
                               :backdrop-1-txt "The Million Dollar Scholars"
                               :mds-info (slurp "resources/docs/mds-info-blurb.md")
-                              :student-info (slurp "resources/docs/student-blurb.md")}))
+                              :student-info (slurp "resources/docs/student-blurb.md")
+                              :student-photo "https://placehold.it/1980x1400/330088?text=Student%20Photo"}))
 
 (defn stories-page []
   (layout/render  "stories.html" {}))
@@ -23,6 +24,3 @@
            (response/header "Content-Type" "text/plain; charset=utf-8")))
   (GET "/stories" []
        (stories-page)))
-
-
- 

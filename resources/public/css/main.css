@@ -1,23 +1,26 @@
+nav {
+  transition: background-color 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s; }
+  nav:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+
 .nav a, a.navbar-brand {
-  color: white; }
-  .nav a:hover, .nav a:focus, a.navbar-brand:hover, a.navbar-brand:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.15) !important; }
-  .nav a:active, a.navbar-brand:active {
-    color: white;
-    background-color: transparent; }
+  color: black;
+  cursor: pointer; }
+  .nav a:hover, .nav a:focus, .nav a:active, a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active {
+    color: black;
+    background-color: transparent !important; }
 
 .navbar-nav > li > .dropdown-menu {
-  background: rgba(0, 0, 0, 0.15);
-  border: none; }
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  box-shadow: none; }
   .navbar-nav > li > .dropdown-menu a {
-    color: white; }
-    .navbar-nav > li > .dropdown-menu a:hover, .navbar-nav > li > .dropdown-menu a:focus {
-      color: white;
-      background-color: rgba(0, 0, 0, 0.15) !important; }
-    .navbar-nav > li > .dropdown-menu a:active {
-      color: white;
-      background-color: transparent; }
+    color: black; }
+    .navbar-nav > li > .dropdown-menu a:hover, .navbar-nav > li > .dropdown-menu a:focus, .navbar-nav > li > .dropdown-menu a:active {
+      color: black;
+      background-color: transparent !important; }
 
 #navbar-main-section ul.navbar-nav {
   display: flex;
@@ -44,7 +47,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   color: white;
   z-index: 100;
   font-size: 18px; }

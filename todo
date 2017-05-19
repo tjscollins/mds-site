@@ -1,10 +1,12 @@
 # AUTHOR: Tyler Collins
 
 * MDS Client-side Code
-  
+** TODO Student Stories Template  
+
 * MDS Server-side Code
-** TODO Student Stories Template
 ** TODO CMS Integration
 *** TODO Choose CMS
 *** TODO Setup CMS on local dev environment
 *** TODO Setup CMS on remote test environment
+** TODO DB code
+*** TODO Test code for verifying DB model is working

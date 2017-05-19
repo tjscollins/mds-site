@@ -1,10 +1,8 @@
-.navbar-mds {
-  color: black; }
-
 .backdrop-box {
   transform: translate(0, 0);
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+}
 
 .backdrop-img-1 {
   position: fixed;
@@ -21,6 +19,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.75);
-  color: white; }
+  color: black;
+}
 
 /*# sourceMappingURL=main.css.map */

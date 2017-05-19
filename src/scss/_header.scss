@@ -1,29 +1,31 @@
+nav {
+    @include custom-transition(background-color 0.5s, ease-in-out, 0s);
+    &:hover {
+        background-color: $header-hover-bg;
+    }
+}
+
+
 .nav a, a.navbar-brand {
     color: $nav-link-text;
-    &:hover, &:focus {
+    cursor: pointer;
+    &:hover, &:focus, &:active {
         color: $nav-link-text;
-        background-color: $header-hover-bg !important;
-    }
-    &:active {
-        color: $nav-link-text;
-        background-color: transparent;
+        background-color: transparent !important;
     }
 }
 
 .navbar-nav>li>.dropdown-menu {
     background: $header-hover-bg;
     border: none;
+    box-shadow: none;
 
     a {
         color: $nav-link-text;
-        &:hover, &:focus {
+        &:hover, &:focus, &:active {
                      color: $nav-link-text;
-                     background-color: $header-hover-bg !important;
+                     background-color: transparent !important;
                  }
-        &:active {
-            color: $nav-link-text;
-            background-color: transparent;
-        }
     }
 }
 

@@ -15,6 +15,7 @@
             [secretary.core :as secretary])
   (:import goog.History))
 
+(def runningIntervals (atom {}))
 (def jq js/jQuery)
 (defn ceil [n] (.ceil js/Math n))
 (defn abs [n]  (.abs js/Math n))
@@ -30,27 +31,33 @@
   to calling window.scrollTo in 3px increments"
   ([current target] (slow-scroll current
                                  target
-                                 (quot (abs (- current target)) 3)))
-  ([current target steps]
-   (let [dist (- target current)
-         interval (if (> dist 0) 
-                    (ceil (/ dist steps))
-                    (* -1 (ceil (/ (* -1 dist) steps))))
+                                 10))
+  ([current target interval]
+   (let [step-dist (if (< (- target current) 0)
+                     -1
+                     1)
          scroll (atom nil)]
      (reset! scroll (js/setInterval
                      (fn [] (let [pos js/scrollY
-                                  next-pos  (ceil (+ pos interval))]
-                              (if (within? pos target interval)
+                                  next-pos  (ceil (+ pos step-dist))]
+                              (if (within? pos target step-dist)
                                 (js/clearInterval @scroll)
                                 (js/scrollTo 0 next-pos))))
-                     0)))))
+                     interval)))))
 
 (defn setup-navbar-links
   "Add jQuery event handlers for #about-us and #our-stories links"
   []
-  (.on (jq ".navbar-brand") "click" (fn [] (slow-scroll js/scrollY 0)))
-  (.on (jq "#about-link") "click" (fn [] (slow-scroll js/scrollY 800)))
-  (.on (jq "#stories-link") "click" (fn [] (slow-scroll js/scrollY 1350))))
+  (.on (jq ".navbar-brand") "click"
+       (fn [] (slow-scroll js/scrollY 0)))
+  
+  (.on (jq "#about-link") "click"
+       (fn [] (do
+                (slow-scroll js/scrollY 375)
+                (js/setTimeout (fn []  (slow-scroll 375 800)) 2000))))
+  
+  (.on (jq "#stories-link") "click"
+       (fn [] (slow-scroll js/scrollY 1350))))
 
 
 ;; (defonce selected-page (cell :home))

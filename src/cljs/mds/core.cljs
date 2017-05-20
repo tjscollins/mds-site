@@ -15,129 +15,44 @@
             [secretary.core :as secretary])
   (:import goog.History))
 
-(def runningIntervals (atom {}))
 (def jq js/jQuery)
 (defn ceil [n] (.ceil js/Math n))
 (defn abs [n]  (.abs js/Math n))
 
-(defn within?
-  "Returns true if first two values are separated by less than the third value"
-  [a b c]
-  (< (abs (- a b)) (abs c)))
-
 (defn slow-scroll
-  "Slower scroll for scrolling-navigation links.  Optional third argument sets
-  the number of smaller scrolls the total scroll will be broken into.  Defaults 
-  to calling window.scrollTo in 3px increments"
+  "Slower scroll for scrolling-navigation links.  Optional third argument sets the 
+  duration of the scroll.  Defaults to 2ms per pixel distance, resulting in a nice, 
+  slow scroll."
   ([current target] (slow-scroll current
                                  target
-                                 10))
-  ([current target interval]
-   (let [step-dist (if (< (- target current) 0)
-                     -1
-                     1)
-         scroll (atom nil)]
-     (reset! scroll (js/setInterval
-                     (fn [] (let [pos js/scrollY
-                                  next-pos  (ceil (+ pos step-dist))]
-                              (if (within? pos target step-dist)
-                                (js/clearInterval @scroll)
-                                (js/scrollTo 0 next-pos))))
-                     interval)))))
+                                 (* 2 (abs (- target current)))))
+  ([current target duration] (slow-scroll current target duration #()))
+  ([current target duration callback]
+   (let [aniProps (clj->js {:scrollTop target})
+         aniOpts (clj->js {:duration duration
+                           :complete callback})]
+     (.animate (jq "body") aniProps aniOpts))))
 
 (defn setup-navbar-links
   "Add jQuery event handlers for #about-us and #our-stories links"
   []
   (.on (jq ".navbar-brand") "click"
        (fn [] (slow-scroll js/scrollY 0)))
-  
   (.on (jq "#about-link") "click"
-       (fn [] (do
-                (slow-scroll js/scrollY 375)
-                (js/setTimeout (fn []  (slow-scroll 375 800)) 2000))))
-  
+       (fn [] (slow-scroll js/scrollY 375 750 (fn [] (js/setTimeout
+                                                      #(slow-scroll 375 800)
+                                                      1500)))))  
   (.on (jq "#stories-link") "click"
        (fn [] (slow-scroll js/scrollY 1350))))
 
-
-;; (defonce selected-page (cell :home))
-
-;; (defonce docs (cell nil))
-
-;; (defn nav-link [uri title page expanded?]
-;;   (h/li :class (cell= {:active (= page selected-page)
-;;                        :nav-item true})
-;;     (h/a :class "nav-link"
-;;          :href uri
-;;          :click #(do
-;;                    (reset! expanded? false)
-;;                    (secretary/dispatch! uri))
-;;          title)))
-
-;; (defn navbar []
-;;   (let [expanded? (cell false)]
-;;     (h/nav :class "navbar navbar-dark bg-primary"
-;;       (h/button :class "navbar-toggler hidden-sm-up"
-;;                 :click #(swap! expanded? not)
-;;                 "☰")
-;;       (h/div :class (cell= {:collapse true
-;;                             :navbar-toggleable-xs true
-;;                             :in expanded?})
-;;        (h/a :class "navbar-brand" :href "/" "mds")
-;;        (h/ul {:class "nav navbar-nav"}
-;;          (nav-link "#/" "Home" :home expanded?)
-;;          (nav-link "#/about" "About" :about expanded?))))))
-
-;; (defn about []
-;;   (h/div :class "container"
-;;     (h/div :class "row"
-;;       (h/div :class "col-md-12"
-;;         (h/img :src (str js/context "/img/warning_clojure.png"))))))
-
-;; (defn home []
-;;   (h/div :class "container"
-;;     (h/div :html (cell= (md->html docs)))))
-
-;; (h/defelem page []
-;;   (h/div :id "app"
-;;     (navbar)
-;;     (cell=
-;;      (case selected-page
-;;        :home (home)
-;;        :about (about)))))
-
-;; -------------------------
-;; Routes
-;; (secretary/set-config! :prefix "#")
-
-;; (secretary/defroute "/" []
-;;  (reset! selected-page :home))
-
-;; (secretary/defroute "/about" []
-;;  (reset! selected-page :about))
-
-;; -------------------------
-;; History
-;; must be called after routes have been defined
-;; (defn hook-browser-navigation! []
-;;  (doto (History.)
-;;    (events/listen
-;;      HistoryEventType/NAVIGATE
-;;      (fn [event]
-;;        (secretary/dispatch! (.-token event))))
-;;    (.setEnabled true)))
-
-;; -------------------------
-;; Initialize app
-;; (defn fetch-docs! []
-;;   (GET "/docs" {:handler #(reset! docs %)}))
-
-;; (defn mount-components []
-;;   (js/jQuery #(.replaceWith (js/jQuery "#app") (page))))
+(defn setup-homepage-header-color-changes
+  "Add skrollr data attributes for text color changes in header"
+  []
+  (if (= "/" (aget js/location "pathname"))
+    (let [selector (jq ".nav a, a.navbar-brand")]
+      (.attr selector "data-1000" "color: rgb(0,0,0);")
+      (.attr selector "data-1200" "color: rgb(255, 255, 255);"))))
 
 (defn init! []
-;;   (load-interceptors!)
-;;   (hook-browser-navigation!)
-;;   (mount-components)
-;;   (fetch-docs!)
-  (setup-navbar-links))
+  (setup-navbar-links)
+  (setup-homepage-header-color-changes))

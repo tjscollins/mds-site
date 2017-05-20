@@ -16,11 +16,6 @@ nav {
   background: rgba(0, 0, 0, 0.05);
   border: none;
   box-shadow: none; }
-  .navbar-nav > li > .dropdown-menu a {
-    color: black; }
-    .navbar-nav > li > .dropdown-menu a:hover, .navbar-nav > li > .dropdown-menu a:focus, .navbar-nav > li > .dropdown-menu a:active {
-      color: black;
-      background-color: transparent !important; }
 
 #navbar-main-section ul.navbar-nav {
   display: flex;

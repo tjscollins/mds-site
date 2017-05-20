@@ -19,14 +19,6 @@ nav {
     background: $header-hover-bg;
     border: none;
     box-shadow: none;
-
-    a {
-        color: $nav-link-text;
-        &:hover, &:focus, &:active {
-                     color: $nav-link-text;
-                     background-color: transparent !important;
-                 }
-    }
 }
 
 #navbar-main-section ul.navbar-nav {

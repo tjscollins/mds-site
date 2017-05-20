@@ -22,16 +22,19 @@
     (db/create-student! *db* {:id 1
                               :first_name "John"
                               :last_name "Doe"
-                              :bio_blurb "Lorem ipsum iacta est."})
+                              :bio_blurb "Lorem ipsum iacta est."
+                              :bio_photo "DSC_0364.jpg"})
     (db/create-student! *db* {:id 2
                               :first_name "Jane"
                               :last_name "Doe"
-                              :bio_blurb "Lorem ipsum iacta test."})
+                              :bio_blurb "Lorem ipsum iacta test."
+                              :bio_photo "DSC_0227.jpg"})
     (f)))
 
 (deftest test-students
   (is (= {:id 1
           :first_name "John"
           :last_name "Doe"
-          :bio_blurb "Lorem ipsum iacta est."}
+          :bio_blurb "Lorem ipsum iacta est."
+          :bio_photo "DSC_0364.jpg"}
          (db/get-student *db* {:id 1}))))

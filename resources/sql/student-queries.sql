@@ -1,8 +1,8 @@
 -- :name create-student! :! :n
 -- :doc creates a new student record
 INSERT INTO students
-(id, first_name, last_name, bio_blurb)
-VALUES (:id, :first_name, :last_name, :bio_blurb)
+(id, first_name, last_name, bio_blurb, bio_photo)
+VALUES (:id, :first_name, :last_name, :bio_blurb, :bio_photo)
 
 -- :name update-student! :! :n
 -- :doc update an existing student record

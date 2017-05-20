@@ -39,9 +39,13 @@
   (.on (jq ".navbar-brand") "click"
        (fn [] (slow-scroll js/scrollY 0)))
   (.on (jq "#about-link") "click"
-       (fn [] (slow-scroll js/scrollY 375 750 (fn [] (js/setTimeout
-                                                      #(slow-scroll 375 800)
-                                                      1500)))))  
+       (fn []
+         (let [current js/scrollY]
+           (if (> current 375)
+             (slow-scroll current 800)
+             (slow-scroll current 375 750 (fn [] (js/setTimeout
+                                                     #(slow-scroll 375 800)
+                                                     1500)))))))  
   (.on (jq "#stories-link") "click"
        (fn [] (slow-scroll js/scrollY 1350))))
 

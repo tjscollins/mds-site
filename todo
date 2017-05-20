@@ -2,6 +2,8 @@
 
 * MDS Client-side Code
 ** TODO Student Stories Template  
+** DONE Fix slow-scroll
+** DONE Fix header link text color when scrolling
 
 * MDS Server-side Code
 ** TODO CMS Integration

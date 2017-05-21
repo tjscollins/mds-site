@@ -5,6 +5,7 @@
 
   :dependencies [[cljs-ajax "0.5.9"]
                  [cljsjs/jquery "2.2.4-0"]
+                 [cljsjs/bootstrap "3.3.6-1"]
                  [compojure "1.6.0"]
                  [conman "0.6.3"]
                  [cprop "0.1.10"]

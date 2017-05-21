@@ -665,3 +665,152 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
 [0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
 [32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.314 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.339 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.524 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.42 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.378 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.375 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.376 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.39 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.38 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.35 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.313 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.366 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.305 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/slick.css
+Notifying browser that CSS file changed: resources/public/css/slick-theme.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.317 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.308 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.309 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.296 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.178 seconds.[0m
+[36m----  Could not Analyze  src/cljs/mds/core.cljs   line:64  column:3  ----[0m
+
+  [1mToo few arguments to if at line 64 src/cljs/mds/core.cljs[0m
+
+  [36m62[0m  [36m"Use Slick to enable the stories-page carousel for selecting student stories"[0m
+  [36m63[0m  [36m[][0m
+  [33m64[0m  [1m(if (= "/stories" (aget js/location "pathname"))[0m
+  [0m  [0m  [33m^--- Too few arguments to if at line 64 src/cljs/mds/core.cljs[0m
+  [36m65[0m  [36m  ;(.slick (jq ".our-students"))[0m
+  [36m66[0m  [36m  ))[0m
+
+[36m----  Analysis Error : Please see src/cljs/mds/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.328 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.306 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.33 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.175 seconds.[0m
+[36m----  Could not Analyze  src/cljs/mds/core.cljs  ----[0m
+
+  [1mNo such namespace: cljsjs.bootstrap, could not locate cljsjs/bootstrap.cljs, cljsjs/bootstrap.cljc, or Closure namespace "cljsjs.bootstrap" [0m
+
+[36m----  Analysis Error : Please see src/cljs/mds/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.207 seconds.[0m
+[36m----  Could not Analyze  src/cljs/mds/core.cljs  ----[0m
+
+  [1mNo such namespace: cljsjs.bootstrap, could not locate cljsjs/bootstrap.cljs, cljsjs/bootstrap.cljc, or Closure namespace "cljsjs.bootstrap" [0m
+
+[36m----  Analysis Error : Please see src/cljs/mds/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.416 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.492 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.425 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.317 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.355 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css

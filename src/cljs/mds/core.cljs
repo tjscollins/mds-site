@@ -2,17 +2,19 @@
   (:require [mds.ajax :refer [load-interceptors!]]
             [ajax.core :refer [GET]]
             [cljsjs.jquery]
-            [goog.events :as events]
-            [goog.history.EventType :as HistoryEventType]
-            [hoplon.core
-             :as h
-             :include-macros true]
-            [hoplon.jquery]
-            [javelin.core
-             :refer [cell]
-             :refer-macros [cell= dosync]]
-            [markdown.core :refer [md->html]]
-            [secretary.core :as secretary])
+            [cljsjs.bootstrap]
+            ;; [goog.events :as events]
+            ;; [goog.history.EventType :as HistoryEventType]
+            ;; [hoplon.core
+            ;;  :as h
+            ;;  :include-macros true]
+            ;; [hoplon.jquery]
+            ;; [javelin.core
+            ;;  :refer [cell]
+            ;;  :refer-macros [cell= dosync]]
+            ;; [markdown.core :refer [md->html]]
+            ;;[secretary.core :as secretary]
+            )
   (:import goog.History))
 
 (def jq js/jQuery)
@@ -20,8 +22,8 @@
 (defn abs [n]  (.abs js/Math n))
 
 (defn slow-scroll
-  "Slower scroll for scrolling-navigation links.  Optional third argument sets the 
-  duration of the scroll.  Defaults to 2ms per pixel distance, resulting in a nice, 
+  "Slower scroll for scrolling-navigation links.  Optional third argument sets the
+  duration of the scroll.  Defaults to 2ms per pixel distance, resulting in a nice,
   slow scroll."
   ([current target] (slow-scroll current
                                  target
@@ -44,8 +46,9 @@
            (if (> current 375)
              (slow-scroll current 800)
              (slow-scroll current 375 750 (fn [] (js/setTimeout
-                                                     #(slow-scroll 375 800)
-                                                     1500)))))))  
+                                                     #(slow-scroll 375 800 1500)
+                                                     1500)))))
+         ))
   (.on (jq "#stories-link") "click"
        (fn [] (slow-scroll js/scrollY 1350))))
 
@@ -56,6 +59,12 @@
     (let [selector (jq ".nav a, a.navbar-brand")]
       (.attr selector "data-1000" "color: rgb(0,0,0);")
       (.attr selector "data-1200" "color: rgb(255, 255, 255);"))))
+
+(defn setup-storiespage-carousel
+  "Use Slick to enable the stories-page carousel for selecting student stories"
+  []
+  (if (= "/stories" (aget js/location "pathname"))
+    (.slick (jq ".our-students"))))
 
 (defn init! []
   (setup-navbar-links)

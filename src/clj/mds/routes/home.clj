@@ -36,26 +36,36 @@
                                                       (get bg-dirs res)
                                                       "DSC_0248.jpg")
                                 :mds-info (slurp "resources/docs/mds-info-blurb.md")
-                                :student-info (student-markdown selected-student) ;(slurp "resources/docs/student-blurb.md")
+                                :student-info (student-markdown selected-student)
                                 :student-photo (str aws-url
                                                     (get bg-dirs res)
                                                     (:bio_photo selected-student))})))
 
+(defn student-photo-markup
+  [student]
+  (str "<div class=\"story-thumbnail-box\" ><img class=\"story-thumbnail\" src=\""
+       aws-url
+       (get bg-dirs 0)
+       (:bio_photo student)
+       "\"></img></div>")
+  )
 (defn stories-page [image]
-  (layout/render  "stories.html" {:title "Our Stories"
-                                  :brand "CNMI Scholars"
-                                  :student-photo-1 (str
-                                                    aws-url
-                                                    (get bg-dirs res)
-                                                    image)}))
+  (let [students (db/get-all-students)]
+    (layout/render  "stories.html" {:title "Our Stories"
+                                    :brand "CNMI Scholars"
+                                    :student-photo-1 (str
+                                                      aws-url
+                                                      (get bg-dirs res)
+                                                      image)
+                                    :student-imgs (apply str (map student-photo-markup students))})))
 
 (defroutes home-routes
-  (GET "/" []
+  (GET "/" request
        (home-page))
   (GET "/docs" []
        (-> (response/ok (-> "docs/docs.md" io/resource slurp))
            (response/header "Content-Type" "text/plain; charset=utf-8")))
-  (GET "/stories" []
+  (GET "/stories" request
        (stories-page "DSC_0021.jpg"))
   (GET "/create/:student" []
        ()))

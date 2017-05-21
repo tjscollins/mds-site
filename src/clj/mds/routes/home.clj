@@ -47,8 +47,27 @@
        aws-url
        (get bg-dirs 0)
        (:bio_photo student)
-       "\"></img></div>")
-  )
+       "\"></img></div>"))
+
+(defn student-story-photo-markup
+  [photo]
+  (str "<img class=\"student-story-photo\" src=\""
+       aws-url
+       (get bg-dirs 0)
+       photo
+       "\"></img>"))
+
+(defn student-story-markup
+  [student]
+  (let [photo-1 (:stry_photo_1 student)
+        photo-2 (:stry_photo_2 student)
+        photo-3 (:stry_photo_3 student)]
+    (str "<div class=\"student-story\" student-id=\""
+         (:id student)
+         "\"> "
+         (apply str (map student-story-photo-markup [photo-1 photo-2 photo-3]))
+         "</div>")))
+
 (defn stories-page [image]
   (let [students (db/get-all-students)]
     (layout/render  "stories.html" {:title "Our Stories"
@@ -57,7 +76,8 @@
                                                       aws-url
                                                       (get bg-dirs res)
                                                       image)
-                                    :student-imgs (apply str (map student-photo-markup students))})))
+                                    :student-imgs (apply str (map student-photo-markup students))
+                                    :student-stories (apply str (map student-story-markup students))})))
 
 (defroutes home-routes
   (GET "/" request

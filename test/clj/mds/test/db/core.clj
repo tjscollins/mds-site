@@ -34,41 +34,41 @@
                               :last_name "Doe"
                               :bio_blurb test-blurb
                               :bio_photo "DSC_0227.jpg"
-                              :stry_photo_1 "DSC_0364.jpg"
-                              :stry_photo_2 "DSC_0364.jpg"
-                              :stry_photo_3 "DSC_0364.jpg"})
+                              :stry_photo_1 "DSC_0227.jpg"
+                              :stry_photo_2 "DSC_0227.jpg"
+                              :stry_photo_3 "DSC_0227.jpg"})
     (db/create-student! *db* {:id 3
                               :first_name "Janet"
                               :last_name "Doelittle"
                               :bio_blurb test-blurb
                               :bio_photo "DSC_0252.jpg"
-                              :stry_photo_1 "DSC_0364.jpg"
-                              :stry_photo_2 "DSC_0364.jpg"
-                              :stry_photo_3 "DSC_0364.jpg"})
+                              :stry_photo_1 "DSC_0252.jpg"
+                              :stry_photo_2 "DSC_0252.jpg"
+                              :stry_photo_3 "DSC_0252.jpg"})
     (db/create-student! *db* {:id 4
                               :first_name "Bob"
                               :last_name "Dole"
                               :bio_blurb test-blurb
                               :bio_photo "DSC_0306.jpg"
-                              :stry_photo_1 "DSC_0364.jpg"
-                              :stry_photo_2 "DSC_0364.jpg"
-                              :stry_photo_3 "DSC_0364.jpg"})
+                              :stry_photo_1 "DSC_0306.jpg"
+                              :stry_photo_2 "DSC_0306.jpg"
+                              :stry_photo_3 "DSC_0306.jpg"})
     (db/create-student! *db* {:id 4
                               :first_name "Richard"
                               :last_name "Nixon"
                               :bio_blurb test-blurb
                               :bio_photo "DSC_0306.jpg"
-                              :stry_photo_1 "DSC_0364.jpg"
-                              :stry_photo_2 "DSC_0364.jpg"
-                              :stry_photo_3 "DSC_0364.jpg"})
+                              :stry_photo_1 "DSC_0306.jpg"
+                              :stry_photo_2 "DSC_0306.jpg"
+                              :stry_photo_3 "DSC_0306.jpg"})
     (db/create-student! *db* {:id 4
                               :first_name "Alexander"
                               :last_name "the Great"
                               :bio_blurb test-blurb
                               :bio_photo "DSC_0306.jpg"
-                              :stry_photo_1 "DSC_0364.jpg"
-                              :stry_photo_2 "DSC_0364.jpg"
-                              :stry_photo_3 "DSC_0364.jpg"})
+                              :stry_photo_1 "DSC_0306.jpg"
+                              :stry_photo_2 "DSC_0306.jpg"
+                              :stry_photo_3 "DSC_0306.jpg"})
     (f)))
 
 (deftest test-students

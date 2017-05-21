@@ -1,0 +1,14 @@
+.story-thumbnail {
+    width: 95%;
+}
+
+.story-thumbnail-box {
+    height: 100px; 
+    overflow: hidden;
+}
+
+.slick-prev, .slick-next {
+    &:before {
+        color: black;
+    }
+}

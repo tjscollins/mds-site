@@ -6,30 +6,40 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>{{title}}</title>
       {% style "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"   %}
+      {% style "css/slick.css" %}
+      {% style "css/slick-theme.css" %}
       {% style "css/main.css"  %}
   </head>
 
   <body>
       {% include nav.html %}
 
-      <div id="skrollr-body" >
-          <img class="backdrop-img"
-               src={{student-photo-1}}
-               data-375="top: 0px;"
-               data-575="top: -400px"
-               style="top: 0px;">          
+      <div class="jumbotron">
+          <h1>Our Scholars</h1>
+          <div class="container">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-8 col-sm-push-2">
+                      <div id="student-carousel" class="">
+                          {{student-imgs|safe}}
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-
+      
       <!-- scripts and styles -->
-      {% script  "https://code.jquery.com/jquery-3.2.1.min.js"  %}
-      {% script "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %}
-      {% script "js/skrollr.min.js"  %}
       {% script "js/app.js" %}
+      {% script "js/slick.js"  %}
       <script type="text/javascript">
        var context = "{{servlet-context}}";
        var csrfToken = "{{csrf-token}}";
+       $("#student-carousel").slick({
+           infinite: true,
+           slidesToShow: 5,
+           slidesToScroll: 1,
+       });
        /* var s = skrollr.init({});*/
-      </script>
+        </script>
   </body>
 
 </html>

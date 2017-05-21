@@ -24,6 +24,19 @@ nav {
   width: 80%;
   width: calc(100%-170px); }
 
+.story-thumbnail {
+  width: 95%; }
+
+.story-thumbnail-box {
+  height: 100px;
+  overflow: hidden; }
+
+.slick-prev:before, .slick-next:before {
+  color: black; }
+
+body {
+  background: skyblue; }
+
 .backdrop-box {
   transform: translate(0, 0);
   width: 100vw;

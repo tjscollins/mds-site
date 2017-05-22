@@ -27,20 +27,22 @@
 (defn home-page []
   (let [students (db/get-all-students)
         selected-student (nth students (rand-int (count students)))]
-    (layout/render "home.html" {:title "CNMI Scholars"
-                                :brand "CNMI Scholars"
-                                :backdrop-txt "The Million Dollar Scholars"
-                                :mds-grp-photo (str aws-url
-                                                    (get bg-dirs res)
-                                                    "DSC_0150.jpg")
-                                :mds-grp-photo-2 (str aws-url
-                                                      (get bg-dirs res)
-                                                      "DSC_0248.jpg")
-                                :mds-info (slurp "resources/docs/mds-info-blurb.md")
-                                :student-info (student-markdown selected-student)
-                                :student-photo (str aws-url
-                                                    (get bg-dirs res)
-                                                    (:bio_photo selected-student))})))
+    (layout/render
+     "home.html" {:page-type 1
+                  :title "CNMI Scholars"
+                  :brand "CNMI Scholars"
+                  :backdrop-txt "The Million Dollar Scholars"
+                  :mds-grp-photo (str aws-url
+                                      (get bg-dirs res)
+                                      "DSC_0150.jpg")
+                  :mds-grp-photo-2 (str aws-url
+                                        (get bg-dirs res)
+                                        "DSC_0248.jpg")
+                  :mds-info (slurp "resources/docs/mds-info-blurb.md")
+                  :student-info (student-markdown selected-student)
+                  :student-photo (str aws-url
+                                      (get bg-dirs res)
+                                      (:bio_photo selected-student))})))
 
 (defn student-photo-markup
   [student]
@@ -73,14 +75,15 @@
 
 (defn stories-page [image]
   (let [students (db/get-all-students)]
-    (layout/render  "stories.html" {:title "Our Stories"
-                                    :brand "CNMI Scholars"
-                                    :student-photo-1 (str
-                                                      aws-url
-                                                      (get bg-dirs res)
-                                                      image)
-                                    :student-imgs (apply str (map student-photo-markup students))
-                                    :student-stories (apply str (map student-story-markup students))})))
+    (layout/render
+     "stories.html" {:title "Our Stories"
+                     :brand "CNMI Scholars"
+                     :student-photo-1 (str
+                                       aws-url
+                                       (get bg-dirs res)
+                                       image)
+                     :student-imgs (apply str (map student-photo-markup students))
+                     :student-stories (apply str (map student-story-markup students))})))
 
 (defroutes home-routes
   (GET "/" request

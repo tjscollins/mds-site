@@ -12,12 +12,12 @@
   </head>
 
   <body>
-      {% include nav.html %}
+      {% include nav.html with page-type="2"%}
 
       <div class="jumbotron">
-          <h1>Our Scholars</h1>
           <div class="container">
-              <div class="row">
+              <div class="row"
+                   style="margin-top: 25px;">
                   <div class="col-xs-12 col-sm-8 col-sm-push-2">
                       <div id="student-carousel" class="">
                           {{student-imgs|safe}}

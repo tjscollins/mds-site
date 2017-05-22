@@ -12,12 +12,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="/">
                 {{brand}}
             </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-main-section">
             <ul class="nav navbar-nav">
+                {% if page-type = 1 %}
                 <li class="active">
                     <a id="about-link">
                         About Us <span class="sr-only">(current)</span>
@@ -28,6 +29,14 @@
                         Our Stories
                     </a>
                 </li>
+                {% endif %}
+                {% if page-type = 2 %}
+                <li>
+                    <a href="#">
+                        Our Scholars
+                    </a>
+                </li>
+                {% endif %}
                 <li class="dropdown">
                     <a href="#"
                        class="dropdown-toggle"

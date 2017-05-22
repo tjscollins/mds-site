@@ -37,6 +37,10 @@ nav {
 .student-story {
   display: none; }
 
+.story-img {
+  position: fixed;
+  top: 100px; }
+
 body {
   background: skyblue; }
 

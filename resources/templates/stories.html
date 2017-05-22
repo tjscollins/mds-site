@@ -34,6 +34,7 @@
       <!-- scripts and styles -->
       {% script "js/app.js" %}
       {% script "js/slick.js"  %}
+      {% script "js/skrollr.min.js" %}
       <script type="text/javascript">
        var context = "{{servlet-context}}";
        var csrfToken = "{{csrf-token}}";
@@ -42,8 +43,8 @@
            slidesToShow: 5,
            slidesToScroll: 1,
        });
-       /* var s = skrollr.init({});*/
-        </script>
+       var s = skrollr.init({});
+      </script>
   </body>
 
 </html>

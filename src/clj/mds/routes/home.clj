@@ -5,6 +5,7 @@
             [ring.util.http-response :as response]
             [clojure.java.io :as io]
             [markdown.core :refer [md-to-html-string]]
+            [selmer.parser :refer [render-file]]
             ))
 
 (def aws-url "https://s3-us-west-1.amazonaws.com/mdscontentfiles/MDS_2017/")
@@ -43,13 +44,18 @@
 
 (defn student-photo-markup
   [student]
-  (str "<div class=\"story-thumbnail-box\" student-id=\""
+  (str "<div style=\"display:flex;flex-direction:column;text-align:center\"><div class=\"story-thumbnail-box\" student-id=\""
        (:id student)
        "\"><img class=\"story-thumbnail\" src=\""
        aws-url
        (get bg-dirs 0)
        (:bio_photo student)
-       "\"></img></div>"))
+       "\"></img>"
+       "</div><h6 style=\"position: relative; top: 0px\">"
+       (:first_name student)
+       " "
+       (:last_name student)
+       "</h6></div>"))
 
 (defn student-story-photo-markup
   [photo]
@@ -68,7 +74,10 @@
          "student-story-"
          (:id student)
          "\"> "
-         (apply str (map student-story-photo-markup [photo-1 photo-2 photo-3]))
+         (render-file "student_story.html"
+                      {:img-1 (student-story-photo-markup photo-1)
+                       :img-2 (student-story-photo-markup photo-2)
+                       :img-3 (student-story-photo-markup photo-3)})
          "</div>")))
 
 (defn stories-page [image]

@@ -44,18 +44,9 @@
 
 (defn student-photo-markup
   [student]
-  (str "<div style=\"display:flex;flex-direction:column;text-align:center\"><div class=\"story-thumbnail-box\" student-id=\""
-       (:id student)
-       "\"><img class=\"story-thumbnail\" src=\""
-       aws-url
-       (get bg-dirs 0)
-       (:bio_photo student)
-       "\"></img>"
-       "</div><h6 style=\"position: relative; top: 0px\">"
-       (:first_name student)
-       " "
-       (:last_name student)
-       "</h6></div>"))
+  (render-file "student_photo.html" {:student-id (:id student)
+                                     :src (str aws-url (get bg-dirs 0) (:bio_photo student))
+                                     :name (str (:first_name student) " " (:last_name student))}))
 
 (defn student-story-photo-markup
   [photo]

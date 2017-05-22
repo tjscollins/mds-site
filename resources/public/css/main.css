@@ -38,8 +38,22 @@ nav {
   display: none; }
 
 .story-img {
-  position: fixed;
-  top: 100px; }
+  position: relative;
+  top: 300px; }
+
+.stories-jumbo {
+  margin: 0; }
+
+.shaded-story-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  z-index: 100;
+  font-size: 18px;
+  margin-top: 100px; }
 
 body {
   background: skyblue; }

@@ -43,18 +43,18 @@
                   :student-photo (str aws-url
                                       (get bg-dirs res)
                                       (:bio_photo selected-student))})))
-
-(defn student-photo-markup
-  [student]
-  (render-file "student_photo.html" {:student-id (:id student)
-                                     :src (str aws-url (get bg-dirs 0) (:bio_photo student))
-                                     :name (str (:first_name student) " " (:last_name student))}))
-
 (defn photo-path
   [photo]
   (str aws-url
        (get bg-dirs 0)
        photo))
+
+(defn student-photo-markup
+  [student]
+  (render-file "student_photo.html"
+               {:student-id (:id student)
+                :src (photo-path (:bio_photo student))
+                :name (clojure.string/join " " (map student [:first_name :last_name]))}))
 
 (defn student-story-markup
   [student]
@@ -62,7 +62,8 @@
         photo-2 (:stry_photo_2 student)
         photo-3 (:stry_photo_3 student)]
     (render-file "student_story.html"
-                 {:id (str "student-story-" ())
+                 {:id (str "student-story-" (:id student))
+                  :name (clojure.string/join " " (map student [:first_name :last_name]))
                   :img-1 (photo-path photo-1)
                   :img-2 (photo-path photo-2)
                   :img-3 (photo-path photo-3)})))

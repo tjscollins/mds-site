@@ -1,18 +1,27 @@
 <div class="student-story" id={{id}}>
     <div class="row story-img"
-         data-0="top: 100px;"
-         data-150="top: 0px;">
-        <img class="student-story-photo" src={{img-1}} />
+         style="top: 0px;">
+        <div class="col-xs-12 col-sm-4 col-sm-push-1">
+            <img class="student-story-photo" src={{img-1}}
+            style="width: 50vw"/>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-push-2 shaded-story-text"
+             style="opacity: 0"
+             data-0="opacity: 0"
+             data-210="opacity:1">
+            <h2 style="text-align: center">Meet {{name}}</h2>
+            
+        </div>
     </div>
     <div class="row story-img"
-         data-0="top: 200px"
-         data-150="top: 100px"
+         data-0="top: 300px"
+         data-150="top: 200px"
          data-300="top: 0px;">
         <img class="student-story-photo" src={{img-2}} />
     </div>
     <div class="row story-img"
-         data-0="top: 300px"
-         data-300="top: 100px"
+         data-0="top: 400px"
+         data-300="top: 200px"
          data-450="top: 0px;"
          style="top: 300px;">
         <img class="student-story-photo" src={{img-3}} />

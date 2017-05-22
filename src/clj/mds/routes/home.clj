@@ -50,28 +50,22 @@
                                      :src (str aws-url (get bg-dirs 0) (:bio_photo student))
                                      :name (str (:first_name student) " " (:last_name student))}))
 
-(defn student-story-photo-markup
+(defn photo-path
   [photo]
-  (str "<img class=\"student-story-photo\" src=\""
-       aws-url
+  (str aws-url
        (get bg-dirs 0)
-       photo
-       "\"></img>"))
+       photo))
 
 (defn student-story-markup
   [student]
   (let [photo-1 (:stry_photo_1 student)
         photo-2 (:stry_photo_2 student)
         photo-3 (:stry_photo_3 student)]
-    (str "<div class=\"student-story\" id=\""
-         "student-story-"
-         (:id student)
-         "\"> "
-         (render-file "student_story.html"
-                      {:img-1 (student-story-photo-markup photo-1)
-                       :img-2 (student-story-photo-markup photo-2)
-                       :img-3 (student-story-photo-markup photo-3)})
-         "</div>")))
+    (render-file "student_story.html"
+                 {:id (str "student-story-" ())
+                  :img-1 (photo-path photo-1)
+                  :img-2 (photo-path photo-2)
+                  :img-3 (photo-path photo-3)})))
 
 (defn stories-page [image]
   (let [students (db/get-all-students)]

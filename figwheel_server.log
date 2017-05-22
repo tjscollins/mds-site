@@ -814,3 +814,146 @@ Notifying browser that CSS file changed: resources/public/css/main.css
 Notifying browser that CSS file changed: resources/public/css/main.css
 Notifying browser that CSS file changed: resources/public/css/main.css
 Notifying browser that CSS file changed: resources/public/css/main.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/mds/core.cljs   line:72  column:4  ----[0m
+
+  [1mUse of undeclared Var mds.core/setup-story-switching[0m
+
+  [36m69[0m  [36m(defn init! [][0m
+  [36m70[0m  [36m  (setup-navbar-links)[0m
+  [36m71[0m  [36m  (setup-homepage-header-color-changes)[0m
+  [33m72[0m  [1m  (setup-story-switching))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var mds.core/setup-story-switching[0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.743 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.385 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.37 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.398 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.335 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.358 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.353 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.338 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/mds/core.cljs   line:71  column:30  ----[0m
+
+  [1mjs/this is shadowed by a local[0m
+
+  [36m67[0m  [36m    (.on story-thumbnails "click"[0m
+  [36m68[0m  [36m         (fn [][0m
+  [36m69[0m  [36m           (this-as this [0m
+  [36m70[0m  [36m             (.log js/console "Click!")[0m
+  [33m71[0m  [1m             (let [id (.attr js/this "student-id")][0m
+  [0m  [0m  [33m                             ^--- js/this is shadowed by a local[0m
+  [36m72[0m  [36m               (.css stories "display" "none")[0m
+  [36m73[0m  [36m               (.css (jq (str "#student-story-" id)) "display" "block")))))))[0m
+  [36m74[0m  [36m[0m
+  [36m75[0m  [36m(defn init! [][0m
+  [36m76[0m  [36m  (setup-navbar-links)[0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.352 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.34 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.322 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/mds/core.cljs   line:71  column:31  ----[0m
+
+  [1mCan't take value of macro cljs.core/this-as[0m
+
+  [36m67[0m  [36m    (.on story-thumbnails "click"[0m
+  [36m68[0m  [36m         (fn [][0m
+  [36m69[0m  [36m           (this-as this [0m
+  [36m70[0m  [36m             (.log js/console "Click!")[0m
+  [33m71[0m  [1m             (.log js/console this-as)[0m
+  [0m  [0m  [33m                              ^--- Can't take value of macro cljs.core/this-as[0m
+  [36m72[0m  [36m             (let [id (.attr this "student-id")][0m
+  [36m73[0m  [36m               (.css stories "display" "none")[0m
+  [36m74[0m  [36m               (.css (jq (str "#student-story-" id)) "display" "block")))))))[0m
+  [36m75[0m  [36m[0m
+  [36m76[0m  [36m(defn init! [][0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.344 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.321 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.313 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.285 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.311 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.297 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.329 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.264 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.299 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+Notifying browser that CSS file changed: resources/public/css/main.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/mds/core.cljs   line:82  column:1  ----[0m
+
+  [1mUse of undeclared Var mds.core/x[0m
+
+  [36m78[0m  [36m    (if (= "/" path)[0m
+  [36m79[0m  [36m      (setup-homepage-header-color-changes))[0m
+  [36m80[0m  [36m    (if (= "/stories" path)[0m
+  [36m81[0m  [36m      (setup-story-switching))))[0m
+  [33m82[0m  [1mx[0m
+  [0m  [0m  [33m^--- Use of undeclared Var mds.core/x[0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/core.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.347 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.301 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.269 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.278 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.303 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.304 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.27 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js

@@ -55,17 +55,27 @@
 (defn setup-homepage-header-color-changes
   "Add skrollr data attributes for text color changes in header"
   []
-  (if (= "/" (aget js/location "pathname"))
-    (let [selector (jq ".nav a, a.navbar-brand")]
-      (.attr selector "data-1000" "color: rgb(0,0,0);")
-      (.attr selector "data-1200" "color: rgb(255, 255, 255);"))))
+  
+  (let [selector (jq ".nav a, a.navbar-brand")]
+    (.attr selector "data-1000" "color: rgb(0,0,0);")
+    (.attr selector "data-1200" "color: rgb(255, 255, 255);")))
 
-(defn setup-storiespage-carousel
-  "Use Slick to enable the stories-page carousel for selecting student stories"
+(defn setup-story-switching
   []
-  (if (= "/stories" (aget js/location "pathname"))
-    (.slick (jq ".our-students"))))
+  (let [story-thumbnails (jq ".story-thumbnail-box")
+        stories (jq ".student-story")]
+    (.on story-thumbnails "click"
+         (fn []
+           (this-as this
+             (let [id (.attr (jq this) "student-id")]
+               (.css stories "display" "none")
+               (.css (jq (str "#student-story-" id)) "display" "block")))))
+    (.css (jq (aget stories 2)) "display" "block")))
 
 (defn init! []
   (setup-navbar-links)
-  (setup-homepage-header-color-changes))
+  (let [path (aget js/location "pathname")]
+    (if (= "/" path)
+      (setup-homepage-header-color-changes))
+    (if (= "/stories" path)
+      (setup-story-switching))))

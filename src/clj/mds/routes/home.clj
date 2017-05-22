@@ -43,7 +43,9 @@
 
 (defn student-photo-markup
   [student]
-  (str "<div class=\"story-thumbnail-box\" ><img class=\"story-thumbnail\" src=\""
+  (str "<div class=\"story-thumbnail-box\" student-id=\""
+       (:id student)
+       "\"><img class=\"story-thumbnail\" src=\""
        aws-url
        (get bg-dirs 0)
        (:bio_photo student)
@@ -62,7 +64,8 @@
   (let [photo-1 (:stry_photo_1 student)
         photo-2 (:stry_photo_2 student)
         photo-3 (:stry_photo_3 student)]
-    (str "<div class=\"student-story\" student-id=\""
+    (str "<div class=\"student-story\" id=\""
+         "student-story-"
          (:id student)
          "\"> "
          (apply str (map student-story-photo-markup [photo-1 photo-2 photo-3]))

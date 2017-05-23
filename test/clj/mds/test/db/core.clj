@@ -53,7 +53,7 @@
                               :stry_photo_1 "DSC_0306.jpg"
                               :stry_photo_2 "DSC_0306.jpg"
                               :stry_photo_3 "DSC_0306.jpg"})
-    (db/create-student! *db* {:id 4
+    (db/create-student! *db* {:id 5
                               :first_name "Richard"
                               :last_name "Nixon"
                               :bio_blurb test-blurb
@@ -61,7 +61,7 @@
                               :stry_photo_1 "DSC_0306.jpg"
                               :stry_photo_2 "DSC_0306.jpg"
                               :stry_photo_3 "DSC_0306.jpg"})
-    (db/create-student! *db* {:id 4
+    (db/create-student! *db* {:id 6
                               :first_name "Alexander"
                               :last_name "the Great"
                               :bio_blurb test-blurb

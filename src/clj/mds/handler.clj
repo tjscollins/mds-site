@@ -1,11 +1,13 @@
 (ns mds.handler
   (:require [compojure.core :refer [routes wrap-routes]]
-            [mds.layout :refer [error-page]]
-            [mds.routes.home :refer [home-routes]]
             [compojure.route :as route]
-            [mds.env :refer [defaults]]
             [mount.core :as mount]
-            [mds.middleware :as middleware]))
+            [mds.env :refer [defaults]]
+            [mds.layout :refer [error-page]]
+            [mds.middleware :as middleware]
+            [mds.routes.home :refer [home-routes]]
+            [mds.routes.api :refer [api-routes]]
+            [ring.middleware.json :refer [wrap-json-body wrap-json-response]]))
 
 (mount/defstate init-app
                 :start ((or (:init defaults) identity))
@@ -13,6 +15,9 @@
 
 (def app-routes
   (routes
+   (-> api-routes
+       (wrap-json-body)
+       (wrap-json-response))
     (-> #'home-routes
         (wrap-routes middleware/wrap-csrf)
         (wrap-routes middleware/wrap-formats))

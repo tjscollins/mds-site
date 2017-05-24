@@ -2,57 +2,15 @@
 @import "base/mixins";
 @import "base/variables";
 
+@import "admin";
+@import "login";
 @import "header";
+@import "home";
 @import "stories";
 
-body {
-    background: skyblue;
+.center-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-
-.backdrop-box {
-  transform: translate(0, 0);
-  width: 100vw;
-  height: 100vh; 
-}
-
-.backdrop-img {
-  position: fixed;
-  top: 0px;
-  left: 0px; 
-  width: 100%;
-  height: auto;
-  z-index: -100;
-  margin-top: 50vh;
-  transform: translateY(-50%);
-} 
- 
-.shaded-text-overlay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: $text-overlay-bg;
-  color: white;
-  z-index: 100;
-  font-size: 18px;
-}
-
-.shaded-text-overlay-fixed {
-  @extend .shaded-text-overlay;
-  position: fixed;
-}
-
-#skrollr-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.divider {
-  position: fixed;
-  background-color: white;
-  height: 50vh;
-  width: 100%;
-  top: 100vh;
-}
-

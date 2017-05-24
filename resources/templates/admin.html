@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>{{title}}</title>
+      {% style "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"   %}
+      {% style "css/main.css"  %}
+  </head>
+
+  <body>
+      {% include admin-nav.html %}
+      {% if %}
+      {% else %}
+      {% endif %}
+      <!-- scripts -->
+      {% script "js/app.js" %}
+      <script type="text/javascript">
+       var context = "{{servlet-context}}";
+       var csrfToken = "{{csrf-token}}";
+      </script>
+  </body>
+
+</html>
+
+
+
+

@@ -1,3 +1,31 @@
+.admin-bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: skyblue; }
+
+.login-form-wrapper {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  color: #666;
+  border-radius: 2px; }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px; }
+
+.login-form-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center; }
+
 nav {
   transition: background-color 0.5s;
   transition-timing-function: ease-in-out;
@@ -23,40 +51,6 @@ nav {
   justify-content: space-around;
   width: 80%;
   width: calc(100%-170px); }
-
-.story-thumbnail {
-  width: 95%; }
-
-.story-thumbnail-box {
-  height: 100px;
-  overflow: hidden; }
-
-.slick-prev:before, .slick-next:before {
-  color: black; }
-
-.student-story {
-  display: none; }
-
-.story-img {
-  position: relative;
-  top: 300px; }
-
-.stories-jumbo {
-  margin: 0; }
-
-.shaded-story-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: white;
-  z-index: 100;
-  font-size: 18px;
-  margin-top: 100px; }
-
-body {
-  background: skyblue; }
 
 .backdrop-box {
   transform: translate(0, 0);
@@ -97,5 +91,42 @@ body {
   height: 50vh;
   width: 100%;
   top: 100vh; }
+
+.story-thumbnail {
+  width: 95%; }
+
+.story-thumbnail-box {
+  height: 100px;
+  overflow: hidden; }
+
+.slick-prev:before, .slick-next:before {
+  color: black; }
+
+.student-story {
+  display: none; }
+
+.story-img {
+  position: relative;
+  top: 300px; }
+
+.stories-jumbo {
+  margin: 0; }
+
+.shaded-story-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  z-index: 100;
+  font-size: 18px;
+  margin-top: 100px; }
+
+.center-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=main.css.map */

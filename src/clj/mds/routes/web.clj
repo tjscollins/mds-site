@@ -1,10 +1,10 @@
-(ns mds.routes.home
-  (:require [mds.layout :as layout]
-            [mds.db.core :refer [*db*] :as db]
+(ns mds.routes.web
+  (:require [clojure.java.io :as io]
             [compojure.core :refer [defroutes GET]]
-            [ring.util.http-response :as response]
-            [clojure.java.io :as io]
             [markdown.core :refer [md-to-html-string]]
+            [mds.db.core :refer [*db*] :as db]
+            [mds.layout :as layout]
+            [ring.util.http-response :as response]
             [selmer.parser :refer [render-file]]
             ))
 
@@ -80,13 +80,12 @@
                      :student-imgs (apply str (map student-photo-markup students))
                      :student-stories (apply str (map student-story-markup students))})))
 
-(defroutes home-routes
+
+(defroutes web-routes
   (GET "/" request
        (home-page))
   (GET "/docs" []
        (-> (response/ok (-> "docs/docs.md" io/resource slurp))
            (response/header "Content-Type" "text/plain; charset=utf-8")))
   (GET "/stories" request
-       (stories-page "DSC_0021.jpg"))
-  (GET "/create/:student" []
-       ()))
+       (stories-page "DSC_0021.jpg")))

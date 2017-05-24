@@ -1,13 +1,14 @@
 (ns mds.middleware
-  (:require [mds.env :refer [defaults]]
-            [clojure.tools.logging :as log]
+  (:require [mds.config :refer [env]]
+            [mds.env :refer [defaults]]
             [mds.layout :refer [*app-context* error-page]]
+            [clojure.tools.logging :as log]
+            [buddy.auth.middleware :refer [wrap-authentication]]
+            [immutant.web.middleware :refer [wrap-session]]
+            [muuntaja.middleware :refer [wrap-format wrap-params]]
             [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
             [ring.middleware.webjars :refer [wrap-webjars]]
-            [muuntaja.middleware :refer [wrap-format wrap-params]]
-            [mds.config :refer [env]]
             [ring.middleware.flash :refer [wrap-flash]]
-            [immutant.web.middleware :refer [wrap-session]]
             [ring.middleware.defaults :refer [site-defaults wrap-defaults]])
   (:import [javax.servlet ServletContext]))
 

@@ -968,3 +968,213 @@ Notifying browser that CSS file changed: resources/public/css/main.css
 Notifying browser that CSS file changed: resources/public/css/main.css
 Notifying browser that CSS file changed: resources/public/css/main.css
 Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+Notifying browser that CSS file changed: resources/public/css/main.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.425 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.347 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.248 seconds.[0m
+[36m----  Could not Analyze  src/cljs/mds/login.cljs   line:7  column:1  ----[0m
+
+  [1mWrong number of args (0) passed to: core/defn--53556[0m
+
+  [36m5[0m  [36m  (:import goog.History))[0m
+  [36m6[0m  [36m[0m
+  [33m7[0m  [1m(defn )[0m
+  [0m [0m  [33m^--- Wrong number of args (0) passed to: core/defn--53556[0m
+
+[36m----  Analysis Error : Please see src/cljs/mds/login.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.318 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.223 seconds.[0m
+[36m----  Could not Analyze  src/cljs/mds/core.cljs  ----[0m
+
+  [1mInvalid :refer, var mds.login/login-handler does not exist [0m
+
+[36m----  Analysis Error : Please see src/cljs/mds/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[31mFailed to compile "target/cljsbuild/public/js/app.js" in 0.199 seconds.[0m
+[36m----  Could not Analyze  src/cljs/mds/core.cljs  ----[0m
+
+  [1mInvalid :refer, var mds.login/login-handler does not exist [0m
+
+[36m----  Analysis Error : Please see src/cljs/mds/core.cljs  ----[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/mds/login.cljs   line:12  column:33  ----[0m
+
+  [1mUse of undeclared Var mds.login/username[0m
+
+  [36m 9[0m  [36m(defn login[0m
+  [36m10[0m  [36m  [][0m
+  [36m11[0m  [36m  (let [username (.val (jq ".username"))])[0m
+  [33m12[0m  [1m  (ajax/POST "login" {:username username[0m
+  [0m  [0m  [33m                                ^--- Use of undeclared Var mds.login/username[0m
+  [36m13[0m  [36m                      :password password}))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn login-handler[0m
+  [36m16[0m  [36m  [][0m
+  [36m17[0m  [36m  (let [login-form (jq ".login-form")][0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/login.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/mds/login.cljs   line:13  column:33  ----[0m
+
+  [1mUse of undeclared Var mds.login/password[0m
+
+  [36m 9[0m  [36m(defn login[0m
+  [36m10[0m  [36m  [][0m
+  [36m11[0m  [36m  (let [username (.val (jq ".username"))])[0m
+  [36m12[0m  [36m  (ajax/POST "login" {:username username[0m
+  [33m13[0m  [1m                      :password password}))[0m
+  [0m  [0m  [33m                                ^--- Use of undeclared Var mds.login/password[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn login-handler[0m
+  [36m16[0m  [36m  [][0m
+  [36m17[0m  [36m  (let [login-form (jq ".login-form")][0m
+  [36m18[0m  [36m    (.on login-form "submit" login)))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/login.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.513 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[36m----  Compiler Warning on   src/cljs/mds/login.cljs   line:13  column:33  ----[0m
+
+  [1mUse of undeclared Var mds.login/username[0m
+
+  [36m 9[0m  [36m(defn login[0m
+  [36m10[0m  [36m  [][0m
+  [36m11[0m  [36m  (let [username (.val (jq "#username"))[0m
+  [36m12[0m  [36m        password (.val (jq "#password"))])[0m
+  [33m13[0m  [1m  (ajax/POST "login" {:username username[0m
+  [0m  [0m  [33m                                ^--- Use of undeclared Var mds.login/username[0m
+  [36m14[0m  [36m                      :password password}))[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(defn login-handler[0m
+  [36m17[0m  [36m  [][0m
+  [36m18[0m  [36m  (let [login-form (jq ".login-form")][0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/login.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/mds/login.cljs   line:14  column:33  ----[0m
+
+  [1mUse of undeclared Var mds.login/password[0m
+
+  [36m10[0m  [36m  [][0m
+  [36m11[0m  [36m  (let [username (.val (jq "#username"))[0m
+  [36m12[0m  [36m        password (.val (jq "#password"))])[0m
+  [36m13[0m  [36m  (ajax/POST "login" {:username username[0m
+  [33m14[0m  [1m                      :password password}))[0m
+  [0m  [0m  [33m                                ^--- Use of undeclared Var mds.login/password[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(defn login-handler[0m
+  [36m17[0m  [36m  [][0m
+  [36m18[0m  [36m  (let [login-form (jq ".login-form")][0m
+  [36m19[0m  [36m    (.on login-form "submit" login)))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/mds/login.cljs  ----[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.446 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.345 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.375 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.356 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.347 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.345 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.291 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.329 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.316 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.301 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.285 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.301 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.3 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.277 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.301 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.28 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.283 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/login.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.462 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 0.356 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/mds/core.js

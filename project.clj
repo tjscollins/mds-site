@@ -3,7 +3,8 @@
   :description "A website for the CNMI's Million Dollar Scholars program"
   :url "https://cnmischolars.com"
 
-  :dependencies [[cljs-ajax "0.5.9"]
+  :dependencies [[buddy "1.3.0"]
+                 [cljs-ajax "0.5.9"]
                  [cljsjs/jquery "2.2.4-0"]
                  [cljsjs/bootstrap "3.3.6-1"]
                  [compojure "1.6.0"]
@@ -24,6 +25,7 @@
                  [org.clojure/java.jdbc "0.7.0-alpha3"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.3.1"]
+                 [org.clojure/data.json "0.2.6"]
                  [org.postgresql/postgresql "42.0.0"]
                  [org.webjars.bower/tether "1.4.0"]
                  [org.webjars/bootstrap "4.0.0-alpha.5"]

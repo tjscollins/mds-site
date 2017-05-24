@@ -73,6 +73,7 @@
     (.css (jq (aget stories 2)) "display" "block")))
 
 (defn init! []
+  (load-interceptors!)
   (setup-navbar-links)
   (let [path (aget js/location "pathname")]
     (if (= "/" path)

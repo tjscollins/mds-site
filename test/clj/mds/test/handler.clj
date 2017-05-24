@@ -3,7 +3,7 @@
             [ring.mock.request :refer :all]
             [mds.handler :refer :all]))
 
-(deftest test-app
+(deftest test-web-routes
   (testing "main route"
     (let [response ((app) (request :get "/"))]
       (is (= 200 (:status response)))))
@@ -15,3 +15,6 @@
   (testing "not-found route"
     (let [response ((app) (request :get "/invalid"))]
       (is (= 404 (:status response))))))
+
+(deftest test-api-routes
+  )

@@ -74,9 +74,9 @@
 
 (defn init! []
   (load-interceptors!)
-  (setup-navbar-links)
   (let [path (aget js/location "pathname")]
     (if (= "/" path)
+      (setup-navbar-links)
       (setup-homepage-header-color-changes))
     (if (= "/stories" path)
       (setup-story-switching))))

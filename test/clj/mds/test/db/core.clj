@@ -24,5 +24,5 @@
     (f)))
 
 (deftest test-students
-  (is (= (get-in db-seed [:students 0])
+  (is (= (get-in seed [:students 0])
          (db/get-student *db* {:id 1}))))

@@ -3,8 +3,10 @@
             [buddy.auth :refer [authenticated? throw-unauthorized]]
             [buddy.auth.backends :as backends]
             [buddy.sign.jwt :as jwt]
+            [buddy.hashers :as hashers]
             [compojure.core :refer [defroutes GET POST]]
             [mds.layout :as layout]
+            [mds.db.core :refer [*db*] :as db]
             [ring.util.http-response :as response]
             ))
 
@@ -21,9 +23,11 @@
 (defn attempt-login
   [request]
   (let [data (:form-params request)
-        user "admin"
-        token (jwt/sign {:user "admin"} auth-secret)]
-    (if (= user (get data "password"))
+        user (get-in data ["username"])
+        pass (get-in data ["password"])
+        hpwd (:pass (db/get-user *db* {:username user}))
+        token (jwt/sign {:user user :pass hpwd} auth-secret)]
+    (if (hashers/check pass hpwd)
       (response/ok {:token token})
       (response/found "/admin"))))
 
@@ -31,7 +35,7 @@
   (GET "/login" []
        (login-page))
   (POST "/login" request
-        (println "Login request: " (:form-params request))
+        (println "Login request: " (hashers/derive (get-in request [:form-params "password"])))
         (attempt-login request))
   (GET "/admin" request
        (if (not (authenticated? request))

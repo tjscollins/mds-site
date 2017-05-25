@@ -10,10 +10,10 @@ UPDATE users
 SET pass = :pass
 WHERE id = :id
 
--- :name get-user :? :1
--- :doc retrieve a user given the id.
+-- :name get-user :? :n
+-- :doc retrieve a user given the username.
 SELECT * FROM users
-WHERE id = :id
+WHERE username = :username
 
 -- :name delete-user! :! :n
 -- :doc delete a user given the id
@@ -23,4 +23,5 @@ WHERE id = :id
 -- :name clear-users! :! :n
 -- :doc delete all users from the table.  NOT TO BE USED IN PRODUCTION.
 TRUNCATE users;
+
 

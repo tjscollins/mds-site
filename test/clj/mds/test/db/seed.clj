@@ -54,7 +54,7 @@
                :stry_photo_3 "DSC_0306.jpg"}]
    :users [{:id 1
             :username "admin"
-            :pass "admin"}]})
+            :pass "bcrypt+sha512$28be3213a164f464d1930554b438737a$12$fca83dc3b015704ffc15d943f91b976c96a522dd4121a896"}]})
 
 (defn seed-db
   []

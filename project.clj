@@ -4,6 +4,7 @@
   :url "https://cnmischolars.com"
 
   :dependencies [[buddy "1.3.0"]
+                 [buddy/buddy-hashers "1.2.0"]
                  [cljs-ajax "0.5.9"]
                  [cljsjs/jquery "2.2.4-0"]
                  [cljsjs/bootstrap "3.3.6-1"]

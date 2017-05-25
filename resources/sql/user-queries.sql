@@ -1,13 +1,13 @@
 -- :name create-user! :! :n
 -- :doc creates a new user record
 INSERT INTO users
-(id, first_name, last_name, email, pass)
-VALUES (:id, :first_name, :last_name, :email, :pass)
+(id, username, pass)
+VALUES (:id, :username, :pass)
 
--- :name update-user! :! :n
+-- :name update-password! :! :n
 -- :doc update an existing user record
 UPDATE users
-SET first_name = :first_name, last_name = :last_name, email = :email
+SET pass = :pass
 WHERE id = :id
 
 -- :name get-user :? :1
@@ -19,3 +19,8 @@ WHERE id = :id
 -- :doc delete a user given the id
 DELETE FROM users
 WHERE id = :id
+
+-- :name clear-users! :! :n
+-- :doc delete all users from the table.  NOT TO BE USED IN PRODUCTION.
+TRUNCATE users;
+

@@ -27,8 +27,10 @@
 (def one-day-ms (* 24 60 60 1000))
 (defn tomorrow [] (java.util.Date. (+ (.getTime (now)) one-day-ms)))
 
-(defn login-page []
-  (layout/render "login.html" {}))
+(defn login-page [request]
+  (let [invalid? (get-in request [:query-params "invalid_login"])]
+    (println (str "Invalid? " invalid?))
+    (layout/render "login.html" {:invalid invalid?})))
 
 (defn admin-page []
   (layout/render "admin.html" {}))
@@ -49,8 +51,8 @@
       (response/found "/login?invalid_login=true"))))
 
 (defroutes admin-routes
-  (GET "/login" []
-       (login-page))
+  (GET "/login" request
+       (login-page request))
   (POST "/login" request
         ;(println "Login request: " (hashers/derive (get-in request [:form-params "password"])))
         (attempt-login request))

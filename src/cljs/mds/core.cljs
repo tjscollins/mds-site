@@ -72,6 +72,26 @@
                (.css (jq (str "#student-story-" id)) "display" "block")))))
     (.css (jq (aget stories 2)) "display" "block")))
 
+(defn jqmodal
+  [s]
+  (jq (str s "-modal")))
+
+(defn jqlink
+  [s]
+  (jq (str s "-link")))
+
+(defn setup-admin-modals
+  "Add event handlers for modal links via jQuery"
+  []
+  (let [elems ["#edit-pages" "#add-pages"
+               "#edit-students" "#add-students"
+               "#add-photos" "#del-photos"]]
+    (dorun
+     (map (fn [elem] (.on (jqlink elem)
+                          "click"
+                          (fn [] (.modal (jqmodal elem)))))
+          elems))))
+
 (defn init! []
   (load-interceptors!)
   (let [path (aget js/location "pathname")]
@@ -79,4 +99,6 @@
       (setup-navbar-links)
       (setup-homepage-header-color-changes))
     (if (= "/stories" path)
-      (setup-story-switching))))
+      (setup-story-switching))
+    (if (= "/admin" path)
+      (setup-admin-modals))))

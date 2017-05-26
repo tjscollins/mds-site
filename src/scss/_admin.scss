@@ -1,3 +1,13 @@
+.navbar-admin {
+    background: teal;
+    a.navbar-brand, ul.navbar-nav li a {
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
 .admin-bg {
     position: fixed;
     top: 0px;
@@ -6,4 +16,41 @@
     height: 100vh;
     overflow: hidden;
     background-color: $admin-bg-color;
+}
+
+.admin-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding-top: 75px;
+
+    .panel-group {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    background: #eee;
+}
+
+.panel-body p {
+    @include custom-transition (background-color 0.5s, ease-in-out, 0s);
+
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+.admin-modal {
+    top: 50px;
+    left: 300px;
+    padding: 0;
+    .modal-dialog {
+        margin: 0;
+        width: 75vw;
+    }
 }

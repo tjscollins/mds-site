@@ -6,9 +6,9 @@
 ** DONE Fix header link text color when scrolling
 
 * MDS Server-side Code
-** TODO CMS Integration
-*** TODO Choose CMS
-*** TODO Setup CMS on local dev environment
-*** TODO Setup CMS on remote test environment
+** TODO User Auth
+*** DONE JWT Generation on login
+*** TODO Store JWT w/ client cookie
+*** TODO Manage User sessions in DB
 ** TODO DB code
 *** TODO Test code for verifying DB model is working

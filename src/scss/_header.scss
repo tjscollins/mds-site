@@ -1,4 +1,4 @@
-nav {
+nav.navbar-mds {
     @include custom-transition(background-color 0.5s, ease-in-out, 0s);
     &:hover {
         background-color: $header-hover-bg;

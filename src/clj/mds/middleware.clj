@@ -9,7 +9,8 @@
             [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
             [ring.middleware.webjars :refer [wrap-webjars]]
             [ring.middleware.flash :refer [wrap-flash]]
-            [ring.middleware.defaults :refer [site-defaults wrap-defaults]])
+            [ring.middleware.defaults :refer [site-defaults wrap-defaults]]
+            [ring.middleware.cookies :as cookies])
   (:import [javax.servlet ServletContext]))
 
 (defn wrap-context [handler]
@@ -54,6 +55,7 @@
 
 (defn wrap-base [handler]
   (-> ((:middleware defaults) handler)
+      cookies/wrap-cookies
       wrap-webjars
       wrap-flash
       (wrap-session {:cookie-attrs {:http-only true}})

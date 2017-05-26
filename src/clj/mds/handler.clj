@@ -9,7 +9,7 @@
             [mds.routes.api :refer [api-routes]]
             [mds.routes.web :refer [web-routes]]
             [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
-            [buddy.auth.middleware :refer [wrap-authentication]]))
+            [buddy.auth.middleware :refer [wrap-authentication wrap-authorization]]))
 
 (mount/defstate init-app
                 :start ((or (:init defaults) identity))
@@ -20,10 +20,9 @@
   (routes
    (-> admin-routes
        (wrap-routes middleware/wrap-csrf)
-       (wrap-routes middleware/wrap-csrf)
-       (wrap-json-body)
-       (wrap-json-response)
-       (wrap-authentication auth-backend))
+       (wrap-routes middleware/wrap-formats)
+       (wrap-authentication auth-backend)
+       (wrap-authorization auth-backend))
    (-> api-routes
        (wrap-json-body)
        (wrap-json-response))

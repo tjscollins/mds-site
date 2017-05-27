@@ -32,12 +32,8 @@
                   :title "CNMI Scholars"
                   :brand "CNMI Scholars"
                   :backdrop-txt "The Million Dollar Scholars"
-                  :mds-grp-photo (str aws-url
-                                      (get bg-dirs res)
-                                      "DSC_0150.jpg")
-                  :mds-grp-photo-2 (str aws-url
-                                        (get bg-dirs res)
-                                        "DSC_0248.jpg")
+                  :mds-grp-photo   "DSC_0150.jpg"
+                  :mds-grp-photo-2 "DSC_0248.jpg"
                   :mds-info (slurp "resources/docs/mds-info-blurb.md")
                   :student-info (student-markdown selected-student)
                   :student-photo (str aws-url

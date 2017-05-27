@@ -96,14 +96,29 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="manage-backups">
+            <div class="panel-heading" role="tab" id="manage-media">
                 <h1 class="panel-title">
-                    <a role="button"
-                       id="restore-backup">                       
-                        Restore Backup
+                    <a class="collapsed"
+                       role="button"
+                       data-toggle="collapse"
+                       data-parent="#admin-accordion"
+                       href="#backup-actions"
+                       aria-expanded="false"
+                       aria-controls="backup-actions">
+                        Manage Backups
                     </a>
                 </h1>
             </div>
+            <div id="backup-actions"
+                 class="panel-collapse collapse"
+                 role="tabpanel"
+                 aria-labelledby="manage-backups">
+                <div class="panel-body">
+                    <p id="create-backup-link">Create Backup</p>
+                    <p id="restore-backup-link">Restore from Backup</p>
+                </div>
+            </div>
         </div>
+    
     </div>
 </div>

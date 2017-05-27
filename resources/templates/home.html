@@ -13,61 +13,75 @@
       {% include nav.html with page-type="1" %}
       <div id="skrollr-body" >
           <img class="backdrop-img"
-               src={{mds-grp-photo}}
-               data-375="top: 0px;"
-               data-575="top: -400px"
-               style="top: 0px;">
+               id="mds-grp-photo"
+               data-photo={{mds-grp-photo}}
+               data-0="top: 0vh;"
+               data-300="top: -25vh;"
+               data-301="top: -1000vh;"
+               style="top: 0px; z-index: 0; opacity: 0">
 
-          <div class="backdrop-img shaded-text-overlay-fixed"
-               data-0="opacity: 0"
-               data-375="opacity: 1;"
-               data-575="opacity: 0;"
-               style="opacity: 0; z-index: 0; height: 100%;">
-              <h1>{{backdrop-txt}}</h1>
-          </div>
-
-          <img class="backdrop-img"
-               src={{mds-grp-photo-2}}
-               data-374="opacity:0;" 
-               data-375="top: 125vh; opacity: 1;" 
-               data-575="top: 0px;"
-               data-800="top: 0px"
-               data-1000="top: -400px"
-               style="top: 100vh; opacity: 0;">
+          <img class="backdrop-img-overlay shaded-text-overlay"
+               id="mds-grp-photo-overlay"
+               src="https://s3-us-west-1.amazonaws.com/mdscontentfiles/MDS_2017/Preview/DSC_0150.jpg"
+               data-0="top: 0vh"
+               data-300="top-25vh;"
+               data-301="top: -1000vh"
+               style="opacity: 1; z-index: 0;" />
+          <h1 class="backdrop-text">
+              {{backdrop-txt}}
+          </h1>
 
           <div class="divider"
-               data-375="top: 100vh"
-               data-575="top: -50vh;"></div>
+               data-0="top: 100vh"
+               data-400="top: -60vh"
+               style="z-index: 2;"></div>
 
+          <img class="backdrop-img"
+               id="mds-grp-photo-2"
+               data-photo={{mds-grp-photo-2}}
+               data-0="top: 125vh; opacity: 1;" 
+               data-400="top: 0vh;"
+               data-600="top: 0vh; z-index: 0"
+               data-850="top: -35v; opacity: 1"
+               data-851="top: -1000vh;"
+               style="top: 100vh; opacity: 0; z-index: 1">
+
+          
           <div class="container"
                id="about-us"
-               data-575="opacity: 0;"
-               data-800="opacity: 1"
-               data-900="opacity: 0" 
-               style="position: fixed; top: 25vh; opacity: 0">
+               data-400="opacity: 0;"
+               data-600="opacity: 1"
+               data-650="opacity: 0" 
+               style="position: fixed; top: 25vh; opacity: 0; z-index: 2">
               <div class="row">
-                  <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-6 col-md-push-6 shaded-text-overlay">
+                  <div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-6 col-md-push-6 shaded-text-overlay">
                       {{mds-info|markdown}}
                   </div>
               </div>
           </div>
 
-          <img class="backdrop-img"
+          <div class="divider"
+               data-600="top:100vh; height: 100vh;"
+               data-1000="top:0vh; height: 0vh;"
+               style="height: 100vh; z-index: 3; opacity: 1;">
+          </div>
+
+          <img class="student-img"
                src={{student-photo}}
-               data-799="opacity: 0" 
-               data-800="top: 130vh; opacity: 1"
-               data-1200="top: 0px"
-               style="top: 100vh; opacity: 0">
+               data-599="opacity: 0" 
+               data-600="top: 100vh; opacity: 1"
+               data-1000="top: 0px"
+               style="top: 100vh; opacity: 0; z-index: 2;">
 
           <div class="divider"
-               data-800="top: 100vh"
-               data-1200="top: -50vh;"></div>
+               data-600="top: 100vh"
+               data-1000="top: -60vh;"></div>
 
           <div class="container"
                id="our-stories"
-               data-1200="opacity: 0;"
-               data-1350="opacity: 1"
-               style="position: fixed; top: 25vh; opacity: 0">
+               data-900="opacity: 0;"
+               data-1100="opacity: 1"
+               style="position: fixed; top: 50vh; opacity: 0; z-index: 3;">
               <div class="row">
                   <div class="col-xs-12 col-sm-8 col-md-6 shaded-text-overlay">
                       {{student-info|markdown}}

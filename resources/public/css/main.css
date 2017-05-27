@@ -102,28 +102,42 @@ nav.navbar-mds {
   width: 100vw;
   height: 100vh; }
 
-.backdrop-img {
+.backdrop-img, .backdrop-img-overlay, .student-img {
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   height: auto;
   z-index: -100;
-  margin-top: 50vh;
-  transform: translateY(-50%); }
+  margin-top: 49.7vh;
+  margin-left: 49.7vw;
+  transform: translate(-50%, -50%); }
 
-.shaded-text-overlay, .shaded-text-overlay-fixed {
+.backdrop-img-overlay {
+  position: absolute; }
+
+.student-img {
+  width: auto;
+  height: 100%; }
+
+.backdrop-text {
+  position: absolute;
+  top: 45vh;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  z-index: 100;
+  font-size: 24px; }
+
+.shaded-text-overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  z-index: 100;
   font-size: 18px; }
-
-.shaded-text-overlay-fixed {
-  position: fixed; }
 
 #skrollr-body {
   display: flex;
@@ -133,9 +147,14 @@ nav.navbar-mds {
 .divider {
   position: fixed;
   background-color: white;
-  height: 50vh;
+  top: 100vh;
   width: 100%;
-  top: 100vh; }
+  height: 60vh;
+  z-index: 100; }
+
+@media only screen and (orientation: portrait) and (max-width: 767px) {
+  body {
+    transform: rotate(90deg); } }
 
 .story-thumbnail {
   width: 95%; }

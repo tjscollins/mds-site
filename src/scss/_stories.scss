@@ -1,3 +1,9 @@
+#student-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .story-thumbnail {
     width: 95%;
 }
@@ -5,6 +11,7 @@
 .story-thumbnail-box {
     height: 100px; 
     overflow: hidden;
+    cursor: pointer; 
 }
 
 .slick-prev, .slick-next {
@@ -24,6 +31,7 @@
 
 .stories-jumbo {
     margin: 0;
+    padding-bottom: 0;
 }
 
 .shaded-story-text {

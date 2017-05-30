@@ -99,5 +99,5 @@
   "Code to run to setup home page"
   []
   (setup-navbar-links)
-  (setup-homepage-header-color-changes)
+  ;; (setup-homepage-header-color-changes)
   (load-images))

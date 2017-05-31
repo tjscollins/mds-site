@@ -18,3 +18,7 @@
   (:import goog.History))
 
 ;; Render admin-modal forms via hoplon or om?
+
+(h/defelem selector [attrs children]
+  (let [selected (cell 0)]
+    ))

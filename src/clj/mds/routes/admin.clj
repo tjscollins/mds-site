@@ -33,6 +33,7 @@
     (layout/render "login.html" {:invalid invalid?})))
 
 (defn admin-page []
+  ;; (let [admin-params (db/get-admin-params *db*)])
   (layout/render "admin.html" {}))
 
 (defn attempt-login

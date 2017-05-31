@@ -23,6 +23,32 @@
     (seed-db)
     (f)))
 
-(deftest test-students
-  (is (= (get-in seed [:students 0])
-         (db/get-student *db* {:id 1}))))
+(def new-students [{:id 6
+                    :first_name "Hamlet"
+                    :last_name "the Dane"
+                    :bio_blurb ""
+                    :bio_photo ""
+                    :stry_photo_1 ""
+                    :stry_photo_2 ""
+                    :stry_photo_3 ""}])
+
+(deftest get-student
+  (let [ids (range (count (:students seed)))]
+    (dorun (map #(is (= (get-in seed [:students %1]) (db/get-student *db* {:id %1})))
+                ids))))
+
+(deftest create-student
+  (db/create-student! *db* (nth new-students 0))
+  (is (= (nth new-students 0) (db/get-student *db* {:id 6}))))
+
+(deftest get-page
+  )
+
+(deftest create-page
+  )
+
+(deftest get-admin-params
+  )
+
+(deftest set-admin-params
+  )

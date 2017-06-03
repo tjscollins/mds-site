@@ -54,7 +54,8 @@
             [lein-cljsbuild "1.1.5"]
             [lein-immutant "2.1.0"]
             [lein-sassc "0.10.0"]
-            [lein-scss "0.3.0"]]
+            [lein-scss "0.3.0"]
+            [lein-cloverage "1.0.9"]]
   :clean-targets ^{:protect false}
   [:target-path [:cljsbuild :builds :app :compiler :output-dir] [:cljsbuild :builds :app :compiler :output-to]]
   :figwheel
@@ -77,10 +78,7 @@
                        :jar        true}
           }}
 
-  :sassc [{:src "src/scss/main.scss"
-           :output-to "resources/public/css/main.css"
-           :style "compressed"
-           :import-path "src/scss/"}]
+  :cloverage {}
 
   :profiles
   {:uberjar {:omit-source true
